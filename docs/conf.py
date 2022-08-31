@@ -148,6 +148,8 @@ htmlhelp_basename = "TrainDB"
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
+    'inputenc': '\\usepackage{kotex}',
+    'babel': '\\usepackage[english]{babel}'
     # The paper size ('letterpaper' or 'a4paper').
     #
     # 'papersize': 'letterpaper',
