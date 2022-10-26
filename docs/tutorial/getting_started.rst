@@ -22,6 +22,8 @@ TrainDB ML Model Library
   * Using ``pip``: pip install pomegranate==0.14.6 sdgym==0.5.0
   * Using ``conda``: conda install -c sdv-dev -c conda-forge sdgym
 
+* `SPFlow <https://github.com/SPFlow/SPFlow>`_
+
 
 설치
 ----

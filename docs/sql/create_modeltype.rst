@@ -89,3 +89,9 @@ CREATE MODELTYPE
 .. code-block:: console
 
   CREATE MODELTYPE tablegan FOR SYNOPSIS AS LOCAL CLASS 'TableGAN' IN 'models/TableGAN.py';
+
+다음은 ``rspn`` 이라는 근사 결과 추론형 모델 타입을 로컬 디렉토리 경로 'models/RSPN.py' 파일의 ``RSPN`` 클래스로 정의하는 문장이다.
+
+.. code-block:: console
+
+  CREATE MODELTYPE rspn FOR INFERENCE AS LOCAL CLASS 'RSPN' IN 'models/RSPN.py';
