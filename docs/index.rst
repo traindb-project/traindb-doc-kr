@@ -2,14 +2,14 @@ TrainDB 사용자 매뉴얼
 =====================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 개요
 
    intro/traindb
    intro/rnd_topics
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 튜토리얼
 
    tutorial/getting_started
@@ -32,7 +32,7 @@ TrainDB 사용자 매뉴얼
    sql/use
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 개발자 안내
  
    dev_guide/sql_reg_test

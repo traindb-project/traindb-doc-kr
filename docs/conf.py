@@ -119,7 +119,7 @@ def setup(app):
 #
 html_theme_options = {
     'collapse_navigation': True,
-    'navigation_depth': 3
+    'navigation_depth': 1
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
