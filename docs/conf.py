@@ -168,7 +168,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "TrainDB.tex", "TrainDB Documentation", "TrainDB Contributors", "manual"),
+    (master_doc, "TrainDB.tex", "TrainDB User Guide", "TrainDB Contributors", "manual"),
 ]
 
 
@@ -176,7 +176,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "TrainDB", "TrainDB Documentation", [author], 1)]
+man_pages = [(master_doc, "TrainDB", "TrainDB User Guide", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -188,10 +188,10 @@ texinfo_documents = [
     (
         master_doc,
         "TrainDB",
-        "TrainDB Documentation",
+        "TrainDB User Guide",
         author,
         "TrainDB",
-        "One line description of project.",
+        "TrainDB User Guide",
         "Miscellaneous",
     ),
 ]
