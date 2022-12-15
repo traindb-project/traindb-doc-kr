@@ -33,6 +33,12 @@ TrainDB 사용자 매뉴얼
 
 .. toctree::
    :maxdepth: 1
+   :caption: 환경 설정
+
+   configuration/traindb_properties
+
+.. toctree::
+   :maxdepth: 1
    :caption: 개발자 안내
  
    dev_guide/sql_reg_test

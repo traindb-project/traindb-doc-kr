@@ -47,16 +47,16 @@ TrainDB의 공개 저장소는 `https://github.com/traindb-project/traindb <http
   $ cd traindb
   $ mvn package
 
-빌드하고 나면 ``traindb-0.5.0.tar.gz`` 파일이 ``traindb-assembly/target`` 디렉토리에 생성된다. 다음과 같이 압축을 해제해 사용하면 된다.
+빌드하고 나면 ``traindb-1.0.tar.gz`` 파일이 ``traindb-assembly/target`` 디렉토리에 생성된다. 다음과 같이 압축을 해제해 사용하면 된다.
 
 .. code-block:: console
 
-  $ tar xvfz traindb-assembly/target/traindb-0.5.0.tar.gz
+  $ tar xvfz traindb-assembly/target/traindb-1.0.tar.gz
 
 TrainDB 내에서 ML 모델을 사용하기 위해, 모델 라이브러리를 추가해야 한다.
 다음의 명령을 통해 모델 라이브러리를 추가할 수 있다.
 
 .. code-block:: console
 
-  $ cd traindb-assembly/target/traindb-0.5.0
+  $ cd traindb-assembly/target/traindb-1.0
   $ svn co https://github.com/traindb-project/traindb-model/trunk/models

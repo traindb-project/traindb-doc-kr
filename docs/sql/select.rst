@@ -28,6 +28,7 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
     <embed type="image/svg+xml" src="../_static/rrd/select4.rrd.svg"/>
     <embed type="image/svg+xml" src="../_static/rrd/select5.rrd.svg"/>
     <embed type="image/svg+xml" src="../_static/rrd/select6.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/select7.rrd.svg"/>
 
 .. only:: latex
 
@@ -37,6 +38,7 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
   .. image:: ../_static/rrd/select4.rrd.*
   .. image:: ../_static/rrd/select5.rrd.*
   .. image:: ../_static/rrd/select6.rrd.*
+  .. image:: ../_static/rrd/select7.rrd.*
 
 **selectItemList**
 
@@ -156,7 +158,6 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
 * ``selectItemList`` 에 근사 질의를 지원하는 집계 함수가 포함되어 있다.
 * ``selectItemList`` 의 컬럼들을 학습한 모델이나 시놉시스가 존재한다.
 
-
 현재 근사 질의가 지원되는 집계 함수로는 ``avg``, ``sum``, ``count``, ``stddev``, ``variance`` 가 있다.
 근사 질의 시 ``GROUP BY``, ``HAVING``, ``ORDER BY`` 절을 함께 사용할 수 있다.
 
@@ -184,6 +185,13 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
 **ORDER BY orderItemList**
 
 ``ORDER BY`` 절은 지정한 ``orderItemList`` 의 순서대로 결과를 정렬하는 데 사용한다. ``ORDER BY`` 절을 생략하면 결과 로우들의 조회 순서는 임의의 순서를 따른다.
+
+**WITHIN numeric_literal SECONDS**
+
+``WITHIN`` 절은 근사 질의 처리 시간을 가능하면 지정한 시간(초) 이내에 처리하도록 지정하는 절이다. 처리 시간이 반드시 보장되지는 않으나, 지정한 시간에 따라 내부에서 사용할 시놉시스나 모델을 선택하는 데 참고 기준이 된다. 현재는 초당 처리 가능한 로우의 수에 따라 시놉시스를 선택하는 정책이 구현되어 있으며, 해당 로우의 수는 설정 파라미터로 조절 가능하다.
+
+**SYNOPSIS 힌트**
+``SELECT /*+ SYNOPSIS(synopsis_name) */ APPROXIMATE`` 와 같이 근사 질의에 사용할 시놉시스를 힌트로 지정할 수 있다. 해당 시놉시스가 존재하고 입력 질의를 처리하는 데 사용할 수 있다면 지정한 시놉시스를 사용하여 질의가 처리된다.
 
 
 예시
