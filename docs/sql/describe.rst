@@ -12,7 +12,7 @@ DESCRIBE
 다이어그램
 ~~~~~~~~~~
 
-**show**
+**describe**
 
 .. only:: html
 
