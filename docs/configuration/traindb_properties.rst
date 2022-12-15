@@ -1,8 +1,8 @@
 traindb.properties
 ==================
 
-TrainDB 서버 파라미터
----------------------
+서버 관련 파라미터
+------------------
 .. list-table:: traindb.server.*
    :widths: 25 25 50
    :header-rows: 1
