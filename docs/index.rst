@@ -26,6 +26,8 @@ TrainDB 사용자 매뉴얼
    sql/drop_model
    sql/drop_modeltype
    sql/drop_synopsis
+   sql/export_model
+   sql/import_model
    sql/select
    sql/show
    sql/train_model
