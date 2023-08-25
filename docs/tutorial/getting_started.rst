@@ -4,26 +4,26 @@
 실행 환경 준비
 --------------
 
-TrainDB를 실행하려면 다음과 같은 환경이 필요하다. 설치 권한이 없다면, 시스템 관리자에게 요청하기 바란다.
+TrainDB를 실행하려면 다음과 같은 환경이 필요하다.
+설치 권한이 없다면 시스템 관리자에게 요청하기 바란다.
+TrainDB에는 서브모듈로 TrainDB ML 모델 라이브러리가 함께 포함되어 있으며, 작동을 위해서는 아래의 요구사항을 만족해야 한다.
 
 TrainDB
 ~~~~~~~
 
 * Java 11+
 * Maven 3.x
-* SQLite3
+* SQLite3 (또는 datanucleus에서 지원하는 다른 DBMS - 카탈로그 저장소 용도)
 
-TrainDB ML Model Library
-~~~~~~~~~~~~~~~~~~~~~~~~
+TrainDB ML 모델 라이브러리
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Python 3.x
-* `SDGym <https://github.com/sdv-dev/SDGym>`_
+* Python 3.8+
+* pyenv, conda 등 파이썬 가상환경 관리자 (선택)
+* pytorch 등 ML 모델에서 사용하는 패키지들 - requirements.txt 설치
 
-  * Using ``pip``: pip install pomegranate==0.14.6 sdgym==0.5.0
-  * Using ``conda``: conda install -c sdv-dev -c conda-forge sdgym
-
-* `SPFlow <https://github.com/SPFlow/SPFlow>`_
-
+  * Using ``pip``: pip install -r traindb-model/requirements.txt
+  * Using ``conda``: conda install --file traindb-model/requirements.txt
 
 설치
 ----
@@ -35,7 +35,7 @@ TrainDB의 공개 저장소는 `https://github.com/traindb-project/traindb <http
 
 .. code-block:: console
 
-  $ git clone https://github.com/traindb-project/traindb.git
+  $ git clone --recurse-submodules https://github.com/traindb-project/traindb.git
 
 빌드
 ~~~~
@@ -47,16 +47,9 @@ TrainDB의 공개 저장소는 `https://github.com/traindb-project/traindb <http
   $ cd traindb
   $ mvn package
 
-빌드하고 나면 ``traindb-1.0.tar.gz`` 파일이 ``traindb-assembly/target`` 디렉토리에 생성된다. 다음과 같이 압축을 해제해 사용하면 된다.
+빌드하고 나면 ``traindb-1.5.tar.gz`` 파일이 ``traindb-assembly/target`` 디렉토리에 생성된다. 다음과 같이 압축을 해제해 사용하면 된다.
 
 .. code-block:: console
 
-  $ tar xvfz traindb-assembly/target/traindb-1.0.tar.gz
+  $ tar xvfz traindb-assembly/target/traindb-1.5.tar.gz
 
-TrainDB 내에서 ML 모델을 사용하기 위해, 모델 라이브러리를 추가해야 한다.
-다음의 명령을 통해 모델 라이브러리를 추가할 수 있다.
-
-.. code-block:: console
-
-  $ cd traindb-assembly/target/traindb-1.0
-  $ svn co https://github.com/traindb-project/traindb-model/trunk/models

@@ -21,7 +21,7 @@ TrainDB 주요 연구개발 기술
 #. `클라우드 ML 모델 라이브러리 제공 서비스 <https://github.com/traindb-project/traindb-ml>`_
 
    * 원격 GPU 서버에서 ML 모델을 학습/제공하기 위한 프레임워크
-   * 클라우드에서 작동 가능한 Kubeflow 기반 ML 모델 등록/학습/실행 기능 지원
+   * 클라우드에서 작동 가능한 ML 모델 등록/학습/실행 기능 지원
 
 #. `TrainDB 연동 시각적 탐사 데이터 분석 지원 도구 <https://github.com/traindb-project/aqp-tav>`_
 

@@ -19,10 +19,12 @@ SHOW
   .. raw:: html
 
     <embed type="image/svg+xml" src="../_static/rrd/show.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/showFilterCondition.rrd.svg"/>
 
 .. only:: latex
 
   .. image:: ../_static/rrd/show.rrd.*
+  .. image:: ../_static/rrd/showFilterCondition.rrd.*
 
 
 키워드 및 파라미터
@@ -35,6 +37,10 @@ SHOW
 **MODELS**
 
 학습되어 있는 모델의 목록을 보여준다.
+
+**HYPERPARAMETERS**
+
+모델 타입의 하이퍼파라미터 목록을 보여준다.
 
 **SYNOPSES**
 
@@ -55,6 +61,14 @@ SHOW
 **TASKS**
 
 수행 질의의 태스크 목록을 보여준다. 환경 설정에서 태스크 정보를 기록하도록 설정되어 있어야 한다.
+
+**TRAININGS**
+
+훈련시킨 모델의 훈련 수행 상태를 보여준다.
+
+**showFilterCondition**
+
+목록 조회 시 지정한 조건을 충족하는 결과만 조회되도록 제한하는 데 사용한다.
 
 
 예시
@@ -77,6 +91,21 @@ SHOW
 .. code-block:: console
 
   SHOW MODELS;
+
+하이퍼파라미터 조회
+~~~~~~~~~~~~~~~~~~~
+
+다음은 ``ctgan`` 이라는 모델 타입의 하이퍼파라미터 목록을 조회하는 문장이다.
+
+.. code-block:: console
+
+  SHOW HYPERPARAMETERS WHERE modeltype_name = 'ctgan';
+
+다음은 ``gan`` 이 포함된 모델 타입의 하이퍼파라미터 목록을 조회하는 문장이다.
+
+.. code-block:: console
+
+  SHOW HYPERPARAMETERS WHERE modeltype_name LIKE '%gan%';
 
 시놉시스 조회
 ~~~~~~~~~~~~~
