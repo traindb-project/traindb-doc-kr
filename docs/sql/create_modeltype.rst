@@ -95,3 +95,13 @@ CREATE MODELTYPE
 .. code-block:: console
 
   CREATE MODELTYPE rspn FOR INFERENCE AS LOCAL CLASS 'RSPN' IN 'models/RSPN.py';
+
+원격 모델 타입 정의
+~~~~~~~~~~~~~~~~~~~
+
+다음은 ``remote_tablegan`` 이라는 데이터 시놉시스 생성형 모델 타입을 URI 'http://<host>:<port>/'의 ``TableGAN`` 클래스로 정의하는 문장이다.
+지정한 주소의 서버에 TrainDB 모델 서버가 작동하고 있다고 가정한다.
+
+.. code-block:: console
+
+  CREATE MODELTYPE remote_tablegan FOR SYNOPSIS AS REMOTE CLASS 'TableGAN' IN 'http:/<host>:<port>/';
