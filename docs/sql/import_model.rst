@@ -15,7 +15,7 @@ PreparedStatement의 setBytes 메소드 등을 이용해 모델을 바이너리 
 다이어그램
 ~~~~~~~~~~
 
-**exportModel**
+**importModel**
 
 .. only:: html
 
