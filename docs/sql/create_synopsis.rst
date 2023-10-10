@@ -40,9 +40,9 @@ CREATE SYNOPSIS
 
 시놉시스 생성에 사용할 모델명을 나타내는 식별자다. 데이터 시놉시스 생성형 모델만 지정 가능하다.
 
-**LIMIT limitNumber**
+**LIMIT**
 
-생성할 시놉시스 테이블의 로우 개수를 지정한다.
+생성할 시놉시스 테이블의 크기를 지정한다. 로우 개수 또는 원본 테이블 대비 백분율로 지정할 수 있다.
 
 
 예시
@@ -55,4 +55,4 @@ CREATE SYNOPSIS
 
 .. code-block:: console
 
-  CREATE SYNOPSIS order_products_syn FROM MODEL tgan LIMIT 10000;
+  CREATE SYNOPSIS order_products_syn FROM MODEL tgan LIMIT 10000 ROWS;
