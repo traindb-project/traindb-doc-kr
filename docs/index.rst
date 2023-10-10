@@ -20,6 +20,8 @@ TrainDB 사용자 매뉴얼
    :maxdepth: 1
    :caption: SQL 레퍼런스
  
+   sql/alter_model
+   sql/alter_synopsis
    sql/create_modeltype
    sql/create_synopsis
    sql/describe
