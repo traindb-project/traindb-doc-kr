@@ -50,6 +50,18 @@ TRAIN MODEL
 
   .. image:: ../_static/rrd/columnNameList.rrd.*
 
+**trainSampleClause**
+
+.. only:: html
+
+  .. raw:: html
+
+    <embed type="image/svg+xml" src="../_static/rrd/trainSampleClause.rrd.svg" width="100%" height="100%"/>
+
+.. only:: latex
+
+  .. image:: ../_static/rrd/trainSampleClause.rrd.*
+
 **trainModelOptionsClause**
 
 .. only:: html
@@ -101,6 +113,10 @@ TRAIN MODEL
 **columnNameList**
 
 학습 대상 데이터로 지정할 컬럼 리스트를 지정한다. 컴마(,)로 구분하여 여러 컬럼을 지정할 수 있다.
+
+**trainSampleClause**
+
+지정한 테이블로부터 일부만 샘플링해서 학습 데이터로 사용하고자 할 때 지정하는 절이다.
 
 **trainModelOptionsClause**
 
