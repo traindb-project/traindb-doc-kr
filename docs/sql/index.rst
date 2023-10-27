@@ -13,7 +13,9 @@ SQL 레퍼런스
    drop_modeltype
    drop_synopsis
    export_model
+   export_synopsis
    import_model
+   import_synopsis
    select
    show
    train_model
