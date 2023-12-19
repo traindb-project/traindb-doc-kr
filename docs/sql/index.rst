@@ -6,6 +6,7 @@ SQL 레퍼런스
 
    alter_model
    alter_synopsis
+   analyze_synopsis
    create_modeltype
    create_synopsis
    describe
