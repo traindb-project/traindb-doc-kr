@@ -22,6 +22,7 @@ TrainDB 사용자 매뉴얼
  
    sql/alter_model
    sql/alter_synopsis
+   sql/analyze_synopsis
    sql/create_modeltype
    sql/create_synopsis
    sql/describe
