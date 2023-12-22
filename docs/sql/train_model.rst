@@ -56,7 +56,7 @@ TRAIN MODEL
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/trainSampleClause.rrd.svg" width="100%" height="100%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/trainSampleClause.rrd.svg"/>
 
 .. only:: latex
 
