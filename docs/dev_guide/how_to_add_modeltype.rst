@@ -17,46 +17,49 @@ TrainDB에서 근사 질의 처리에 사용하는 모델타입으로는 시놉�
 
 * 시놉시스 생성형 모델타입: ``TrainDBSynopsisModel``(https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L58-L62)
 
-```python
-class TrainDBSynopsisModel(TrainDBModel, abc.ABC):
-  """Base class for all the TrainDB synopsis generation models."""
+.. code-block:: python
 
-  def synopsis(self, row_count):
-    pass
-```
+  class TrainDBSynopsisModel(TrainDBModel, abc.ABC):
+    """Base class for all the ``TrainDB`` synopsis generation models."""
+
+    def synopsis(self, row_count):
+      pass
+
 
 * 결과추론형 모델타입: ``TrainDBInferenceModel``(https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L64-L68)
 
-```python
-class TrainDBInferenceModel(TrainDBModel, abc.ABC):
-  """Base class for all the TrainDB inference models."""
+.. code-block:: python
 
-  def infer(self, agg_expr, group_by_column, where_condition):
-    pass
-```
+  class TrainDBInferenceModel(TrainDBModel, abc.ABC):
+
+    """Base class for all the ``TrainDB`` inference models."""
+
+    def infer(self, agg_expr, group_by_column, where_condition):
+      pass
+
 
 위의 두 모델타입은 공통의 베이스 클래스를 상속하고 있으므로 여기에 포함된 함수들도 함께 구현해야 한다.
 
 * 공통 베이스 클래스: ``TrainDBModel``(https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L46-L56)
 
-```python
-class TrainDBModel(abc.ABC):
-  """Base class for all the TrainDB models."""
+.. code-block:: python
 
-  ...
+  class TrainDBModel(abc.ABC):
+    """Base class for all the ``TrainDB`` models."""
 
-  def train(self, real_data, table_metadata):
-    pass
+    ...
 
-
-  def save(self, output_path):
-    pass
-
-
-  def load(self, input_path):
-    pass
-
-
-  def list_hyperparameters():
-    return []
-```
+    def train(self, real_data, table_metadata):
+      pass
+   
+   
+    def save(self, output_path):
+      pass
+   
+   
+    def load(self, input_path):
+      pass
+   
+   
+    def list_hyperparameters():
+      return []
