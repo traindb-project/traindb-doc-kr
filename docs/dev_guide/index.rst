@@ -6,3 +6,4 @@
 
    sql_reg_test
    coding_style
+   how_to_add_modeltype
