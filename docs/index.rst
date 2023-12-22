@@ -50,3 +50,4 @@ TrainDB 사용자 매뉴얼
  
    dev_guide/sql_reg_test
    dev_guide/coding_style
+   dev_guide/how_to_add_modeltype
