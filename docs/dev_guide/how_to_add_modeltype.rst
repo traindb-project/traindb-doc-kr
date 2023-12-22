@@ -15,7 +15,7 @@ TrainDB에서 근사 질의 처리에 사용하는 모델타입으로는 시놉�
 자신의 모델타입을 추가하려면 추상 베이스 클래스를 상속받아 구현하면 된다.
 추가하려는 모델타입에 따라 다음의 클래스를 구현하면 된다.
 
-* 시놉시스 생성형 모델타입: ``TrainDBSynopsisModel``(https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L58-L62)
+* 시놉시스 생성형 모델타입: `TrainDBSynopsisModel <https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L58-L62>`_
 
 .. code-block:: python
 
@@ -26,7 +26,7 @@ TrainDB에서 근사 질의 처리에 사용하는 모델타입으로는 시놉�
       pass
 
 
-* 결과추론형 모델타입: ``TrainDBInferenceModel``(https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L64-L68)
+* 결과추론형 모델타입: `TrainDBInferenceModel <https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L64-L68>`_
 
 .. code-block:: python
 
@@ -40,7 +40,7 @@ TrainDB에서 근사 질의 처리에 사용하는 모델타입으로는 시놉�
 
 위의 두 모델타입은 공통의 베이스 클래스를 상속하고 있으므로 여기에 포함된 함수들도 함께 구현해야 한다.
 
-* 공통 베이스 클래스: ``TrainDBModel``(https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L46-L56)
+* 공통 베이스 클래스: `TrainDBModel <https://github.com/traindb-project/traindb-model/blob/02bf2f1fd3d81df22a53c5f32ae04c87098bc887/models/TrainDBBaseModel.py#L46-L56>`_
 
 .. code-block:: python
 
