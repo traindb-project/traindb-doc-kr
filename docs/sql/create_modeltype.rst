@@ -63,11 +63,11 @@ CREATE MODELTYPE
 
 **LOCAL**
 
-로컬 머신에 위치한 모델 타입임을 지정하는 키워드다.
+TrainDB와 모델이 동일한 머신에 위치한 모델 타입임을 지정하는 키워드로, 생략 가능하다.
 
 **REMOTE**
 
-원격 머신에 위치한 모델 타입임을 지정하는 키워드다.
+TrainDB와 모델이 서로 다른 머신에 위치한 모델 타입임을 지정하는 키워드다.
 
 **'modeltypeClassName'**
 
@@ -88,13 +88,13 @@ CREATE MODELTYPE
 
 .. code-block:: console
 
-  CREATE MODELTYPE tablegan FOR SYNOPSIS AS LOCAL CLASS 'TableGAN' IN 'models/TableGAN.py';
+  CREATE MODELTYPE tablegan FOR SYNOPSIS AS CLASS 'TableGAN' IN 'models/TableGAN.py';
 
 다음은 ``rspn`` 이라는 근사 결과 추론형 모델 타입을 로컬 디렉토리 경로 'models/RSPN.py' 파일의 ``RSPN`` 클래스로 정의하는 문장이다.
 
 .. code-block:: console
 
-  CREATE MODELTYPE rspn FOR INFERENCE AS LOCAL CLASS 'RSPN' IN 'models/RSPN.py';
+  CREATE MODELTYPE rspn FOR INFERENCE AS CLASS 'RSPN' IN 'models/RSPN.py';
 
 원격 모델 타입 정의
 ~~~~~~~~~~~~~~~~~~~
