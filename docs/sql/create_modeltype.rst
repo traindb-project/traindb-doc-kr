@@ -35,7 +35,7 @@ CREATE MODELTYPE
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/modeltypeSpecClause.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/modeltypeSpecClause.rrd.svg" width="90%"/>
 
 .. only:: latex
 
