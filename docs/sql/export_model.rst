@@ -20,7 +20,7 @@ EXPORT MODEL
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/exportModel.rrd.svg" width="90%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/exportModel.rrd.svg" width="100%"/>
 
 .. only:: latex
 

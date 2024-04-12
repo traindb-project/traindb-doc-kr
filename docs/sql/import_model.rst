@@ -21,7 +21,7 @@ PreparedStatement의 setBytes 메소드 등을 이용해 모델을 바이너리 
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/importModel.rrd.svg" width="90%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/importModel.rrd.svg" width="100%"/>
 
 .. only:: latex
 

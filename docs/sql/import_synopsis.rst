@@ -21,7 +21,7 @@ PreparedStatement의 setBytes 메소드 등을 이용해 시놉시스를 바이�
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/importSynopsis.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/importSynopsis.rrd.svg" width="100%"/>
     <embed type="image/svg+xml" src="../_static/rrd/importSynopsis2.rrd.svg"/>
 
 .. only:: latex
