@@ -18,11 +18,13 @@ SHOW
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/show.rrd.svg" width="100%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/show.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/show2.rrd.svg"/>
 
 .. only:: latex
 
   .. image:: ../_static/rrd/show.rrd.*
+  .. image:: ../_static/rrd/show2.rrd.*
 
 **showFilterCondition**
 
