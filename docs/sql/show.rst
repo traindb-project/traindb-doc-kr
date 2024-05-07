@@ -18,12 +18,22 @@ SHOW
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/show.rrd.svg"/>
-    <embed type="image/svg+xml" src="../_static/rrd/showFilterCondition.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/show.rrd.svg" width="100%"/>
 
 .. only:: latex
 
   .. image:: ../_static/rrd/show.rrd.*
+
+**showFilterCondition**
+
+.. only:: html
+
+  .. raw:: html
+
+    <embed type="image/svg+xml" src="../_static/rrd/showFilterCondition.rrd.svg"/>
+
+.. only:: latex
+
   .. image:: ../_static/rrd/showFilterCondition.rrd.*
 
 
