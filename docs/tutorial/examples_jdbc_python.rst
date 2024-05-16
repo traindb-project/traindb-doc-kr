@@ -91,5 +91,5 @@ TrainDB SQL 실행
   ...
   curs = conn.cursor()
   curs.execute("SELECT sum(add_to_cart_order) FROM instacart_small.order_products")
-rs = curs.fetchall()
+  rs = curs.fetchall()
   ...
