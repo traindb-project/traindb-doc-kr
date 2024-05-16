@@ -15,6 +15,7 @@ TrainDB 사용자 매뉴얼
    tutorial/getting_started
    tutorial/examples_cli
    tutorial/examples_jdbc
+   tutorial/examples_jdbc_python
 
 .. toctree::
    :maxdepth: 1

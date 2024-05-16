@@ -42,7 +42,7 @@ TrainDB SQL 실행
 .. code-block:: console
 
   0: jdbc:traindb:mysql//localhost> CREATE MODELTYPE tablegan FOR SYNOPSIS AS LOCAL CLASS 'TableGAN' IN 'models/TableGAN.py'; 
-  No rows affected (0.231 seconds)
+  No rows affected (#.## seconds)
   0: jdbc:traindb:mysql//localhost> SHOW MODELTYPES;
   +-----------+----------+----------+----------+--------------------+
   | modeltype | category | location | class    | uri                |
