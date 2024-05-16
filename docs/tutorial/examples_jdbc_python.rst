@@ -67,7 +67,7 @@ TrainDB SQL 실행
 
   ...
   stmt = conn.jconn.createStatement()
-  stmt.execute("CREATE SYNOPSIS tgan_syn FROM MODEL tgan LIMIT 1000")
+  stmt.execute("CREATE SYNOPSIS order_products_syn FROM MODEL tgan LIMIT 1000")
 
 근사 질의 실행
 ~~~~~~~~~~~~~~
