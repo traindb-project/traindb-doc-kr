@@ -18,12 +18,11 @@ TrainDB
 TrainDB ML 모델 라이브러리
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Python 3.8+
-* pyenv, conda 등 파이썬 가상환경 관리자 (선택)
+* Python 3.8 또는 3.9
+* pyenv 등 파이썬 가상환경 관리자 (선택)
 * pytorch 등 ML 모델에서 사용하는 패키지들 - requirements.txt 설치
 
   * Using ``pip``: pip install -r traindb-model/requirements.txt
-  * Using ``conda``: conda install --file traindb-model/requirements.txt
 
 설치
 ----
@@ -47,9 +46,9 @@ TrainDB의 공개 저장소는 `https://github.com/traindb-project/traindb <http
   $ cd traindb
   $ mvn package
 
-빌드하고 나면 ``traindb-1.5.tar.gz`` 파일이 ``traindb-assembly/target`` 디렉토리에 생성된다. 다음과 같이 압축을 해제해 사용하면 된다.
+빌드하고 나면 ``traindb-x.y.tar.gz`` 파일이 ``traindb-assembly/target`` 디렉토리에 생성된다. 다음과 같이 압축을 해제해 사용하면 된다.
 
 .. code-block:: console
 
-  $ tar xvfz traindb-assembly/target/traindb-1.5.tar.gz
+  $ tar xvfz traindb-assembly/target/traindb-*.tar.gz
 
