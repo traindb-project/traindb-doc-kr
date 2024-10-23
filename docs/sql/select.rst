@@ -158,7 +158,7 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
 * ``selectItemList`` 에 근사 질의를 지원하는 집계 함수가 포함되어 있다.
 * ``selectItemList`` 의 컬럼들을 학습한 모델이나 시놉시스가 존재한다.
 
-현재 근사 질의가 지원되는 집계 함수로는 ``avg``, ``sum``, ``count``, ``stddev``, ``variance``,  ``covar``, ``corr`` 가 있다.
+현재 근사 질의가 지원되는 집계 함수로는 ``avg``, ``sum``, ``count``, ``stddev``, ``variance``,  ``covar(covar_pop, covar_samp)``, ``corr``, ``min``, ``max``, ``mode``, ``percentile_disc`` 등이 있다.
 근사 질의 시 ``GROUP BY``, ``HAVING``, ``ORDER BY`` 절을 함께 사용할 수 있다.
 
 **selectItemList**
