@@ -33,10 +33,14 @@ TRAIN MODEL
   .. raw:: html
 
     <embed type="image/svg+xml" src="../_static/rrd/trainTargetClause.rrd.svg" width="100%" height="100%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/trainTargetClause2.rrd.svg" width="100%" height="100%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/trainTargetClause3.rrd.svg" width="100%" height="100%"/>
 
 .. only:: latex
 
   .. image:: ../_static/rrd/trainTargetClause.rrd.*
+  .. image:: ../_static/rrd/trainTargetClause2.rrd.*
+  .. image:: ../_static/rrd/trainTargetClause3.rrd.*
 
 **columnNameList**
 
@@ -101,6 +105,7 @@ TRAIN MODEL
 **trainTargetClause**
 
 학습시킬 대상 데이터를 지정하는 절이다.
+여러 테이블의 컬럼에 대해 모델을 훈련하려면 JOIN 절을 이용하여 지정한다.
 
 **schemaName**
 
@@ -113,6 +118,10 @@ TRAIN MODEL
 **columnNameList**
 
 학습 대상 데이터로 지정할 컬럼 리스트를 지정한다. 컴마(,)로 구분하여 여러 컬럼을 지정할 수 있다.
+
+**joinCondition**
+
+학습 대상 테이블이 둘 이상일 경우, 학습 대상 테이블들을 조인하기 위한 조건을 지정하는 절이다.
 
 **trainSampleClause**
 
@@ -143,12 +152,22 @@ TRAIN MODEL
 .. code-block:: console
 
   TRAIN MODEL tgan MODELTYPE tablegan
-  ON instacart.order_products(reordered, add_to_cart_order);
+  FROM instacart.order_products(reordered, add_to_cart_order);
 
 뒤에 ``OPTIONS`` 절을 추가해 ``epochs`` 하이퍼파라미터를 지정할 수도 있다.
 
 .. code-block:: console
 
   TRAIN MODEL tgan MODELTYPE tablegan
-  ON instacart.order_products(reordered, add_to_cart_order)
+  FROM instacart.order_products(reordered, add_to_cart_order)
   OPTIONS ( 'epochs' = 100 );
+
+둘 이상의 테이블에 있는 데이터에 대해서도 다음과 같이 모델을 훈련시킬 수 있다.
+
+.. code-block:: console
+
+  TRAIN MODEL tgan MODELTYPE tablegan
+  FROM instacart.order_products(reordered, add_to_cart_order, order_id)
+  JOIN instacart.orders(order_id, order_dow)
+  ON orders.order_id = order_products.order_id;
+
