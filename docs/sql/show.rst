@@ -19,7 +19,7 @@ SHOW
   .. raw:: html
 
     <embed type="image/svg+xml" src="../_static/rrd/show.rrd.svg"/>
-    <embed type="image/svg+xml" src="../_static/rrd/show2.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/show2.rrd.svg" width="100%" height="100%"/>
 
 .. only:: latex
 
