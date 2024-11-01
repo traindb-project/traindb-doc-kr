@@ -18,8 +18,8 @@ TRAIN MODEL
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/trainModel1.rrd.svg"/>
-    <embed type="image/svg+xml" src="../_static/rrd/trainModel2.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/trainModel1.rrd.svg" width="100%" height="100%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/trainModel2.rrd.svg" width="100%" height="100%"/>
 
 .. only:: latex
 
