@@ -26,21 +26,19 @@ TRAIN MODEL
   .. image:: ../_static/rrd/trainModel1.rrd.*
   .. image:: ../_static/rrd/trainModel2.rrd.*
 
-**trainTargetClause**
+**trainDataClause**
 
 .. only:: html
 
   .. raw:: html
 
-    <embed type="image/svg+xml" src="../_static/rrd/trainTargetClause.rrd.svg" width="100%" height="100%"/>
-    <embed type="image/svg+xml" src="../_static/rrd/trainTargetClause2.rrd.svg" width="100%" height="100%"/>
-    <embed type="image/svg+xml" src="../_static/rrd/trainTargetClause3.rrd.svg" width="100%" height="100%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/trainDataClause.rrd.svg" width="100%" height="100%"/>
+    <embed type="image/svg+xml" src="../_static/rrd/trainDataClause2.rrd.svg" width="100%" height="100%"/>
 
 .. only:: latex
 
-  .. image:: ../_static/rrd/trainTargetClause.rrd.*
-  .. image:: ../_static/rrd/trainTargetClause2.rrd.*
-  .. image:: ../_static/rrd/trainTargetClause3.rrd.*
+  .. image:: ../_static/rrd/trainDataClause.rrd.*
+  .. image:: ../_static/rrd/trainDataClause2.rrd.*
 
 **columnNameList**
 
@@ -53,6 +51,19 @@ TRAIN MODEL
 .. only:: latex
 
   .. image:: ../_static/rrd/columnNameList.rrd.*
+
+**trainDataConditionClause**
+
+.. only:: html
+
+  .. raw:: html
+
+    <embed type="image/svg+xml" src="../_static/rrd/trainDataConditionClause.rrd.svg"/>
+
+.. only:: latex
+
+  .. image:: ../_static/rrd/trainDataConditionClause.rrd.*
+
 
 **trainSampleClause**
 
@@ -102,7 +113,19 @@ TRAIN MODEL
 
 모델을 얻기 위해 학습시킬 모델 타입을 나타내는 식별자다.
 
-**trainTargetClause**
+**UPDATE**
+
+이미 학습되어 있는 모델에 추가 데이터를 학습하여 모델을 업데이트 할 때 사용한다.
+
+**LIKE**
+
+기존 모델과 동일한 테이블의 컬럼들에 대해 새로운 모델을 학습할 때 사용한다.
+
+**exModelName**
+
+학습되어 있는 모델명을 나타내는 식별자다.
+
+**trainDataClause**
 
 학습시킬 대상 데이터를 지정하는 절이다.
 여러 테이블의 컬럼에 대해 모델을 훈련하려면 JOIN 절을 이용하여 지정한다.
@@ -119,9 +142,11 @@ TRAIN MODEL
 
 학습 대상 데이터로 지정할 컬럼 리스트를 지정한다. 컴마(,)로 구분하여 여러 컬럼을 지정할 수 있다.
 
-**joinCondition**
+**trainDataConditionClause**
 
-학습 대상 테이블이 둘 이상일 경우, 학습 대상 테이블들을 조인하기 위한 조건을 지정하는 절이다.
+학습시킬 테이블의 컬럼 중 대상 데이터를 가져오기 위한 조건을 지정하는 절이다.
+학습 대상 테이블이 둘 이상일 경우에 학습 대상 테이블들을 조인하기 위한 조건을 지정하거나,
+이미 학습되어 있는 모델을 업데이트할 데이터에 대한 조건을 지정하는 데 사용할 수 있다.
 
 **trainSampleClause**
 
@@ -166,8 +191,20 @@ TRAIN MODEL
 
 .. code-block:: console
 
-  TRAIN MODEL tgan MODELTYPE tablegan
+  TRAIN MODEL tgan_multi_tables MODELTYPE tablegan
   FROM instacart.order_products(reordered, add_to_cart_order, order_id)
   JOIN instacart.orders(order_id, order_dow)
   ON orders.order_id = order_products.order_id;
 
+모델 업데이트
+~~~~~~~~~~~~~
+
+다음은 ``rspn_op`` 라는 모델을 기존에 정의되어 있는 ``rspn`` 이라는 결과 추론형 모델 타입으로 ``instacart`` 스키마에 속한 ``order_products`` 테이블의 ``reordered``, ``add_to_cart_order`` 컬럼을 대상으로 학습시킨 후, 추가 데이터를 학습하여 ``rspn_op_update`` 라는 업데이트 된 모델을 훈련하는 문장이다.
+
+.. code-block:: console
+
+  TRAIN MODEL rspn_op MODELTYPE rspn
+  FROM instacart.order_products(reordered, add_to_cart_order);
+
+  TRAIN MODEL rspn_op_update UPDATE rspn_op
+  ON order_products.order_id > 3000000;
