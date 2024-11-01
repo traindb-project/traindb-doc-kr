@@ -25,6 +25,7 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
     <embed type="image/svg+xml" src="../_static/rrd/select1.rrd.svg"/>
     <embed type="image/svg+xml" src="../_static/rrd/select2.rrd.svg"/>
     <embed type="image/svg+xml" src="../_static/rrd/select3.rrd.svg"/>
+    <embed type="image/svg+xml" src="../_static/rrd/select33.rrd.svg"/>
     <embed type="image/svg+xml" src="../_static/rrd/select4.rrd.svg"/>
     <embed type="image/svg+xml" src="../_static/rrd/select5.rrd.svg"/>
     <embed type="image/svg+xml" src="../_static/rrd/select6.rrd.svg"/>
@@ -35,6 +36,7 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
   .. image:: ../_static/rrd/select1.rrd.*
   .. image:: ../_static/rrd/select2.rrd.*
   .. image:: ../_static/rrd/select3.rrd.*
+  .. image:: ../_static/rrd/select33.rrd.*
   .. image:: ../_static/rrd/select4.rrd.*
   .. image:: ../_static/rrd/select5.rrd.*
   .. image:: ../_static/rrd/select6.rrd.*
@@ -174,6 +176,10 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
 ``WHERE`` 조건절은 지정한 조건을 충족하는 로우(row)들만 조회되도록 제한하는 데 사용한다.
 ``WHERE`` 조건절을 생략하면 ``FROM`` 절의 모든 로우가 조회된다.
 
+**WHATIF booleanExpression TO numeric_literal**
+
+``WHATIF`` 조건절은 지정한 조건을 충족하는 로우(row)들을 ``TO`` 뒤의 비율만큼 보정하는 데 사용한다.
+
 **GROUP BY groupItemList**
 
 ``groupItemList`` 에 포함된 표현식을 기준으로 조회된 로우들을 그룹화하는 데 사용하는 절이다. ``GROUP BY`` 절에 명시된 컬럼은 ``selectItemList`` 에 포함되어야 한다.
@@ -224,3 +230,10 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
   SELECT APPROXIMATE sum(reordered) FROM instacart.order_products
   GROUP BY add_to_cart_order
   ORDER BY add_to_cart_order ASC;
+
+가상의 조건을 지정하여 시뮬레이션 질의를 수행하려면 다음과 같이 ``WHATIF`` 절을 사용할 수 있다.
+
+.. code-block:: console
+
+  SELECT APPROXIMATE count(*) FROM instacart.order_products
+  WITH reordered = 1 TO 1.1;
