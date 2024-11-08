@@ -236,4 +236,4 @@ TrainDB는 Apache Calcite 기반으로 구현되어 있기 때문에 정확 질�
 .. code-block:: console
 
   SELECT APPROXIMATE count(*) FROM instacart.order_products
-  WITH reordered = 1 TO 1.1;
+  WHATIF reordered = 1 TO 1.1;
