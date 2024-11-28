@@ -10,15 +10,27 @@ traindb.properties
    * - 파라미터명
      - 설정 값
      - 설명
+   * - traindb.server.address
+     - **localhost:58000**
+     - TrainDB 서버 프로세스의 주소
+   * - traindb.server.session.max
+     - **100**
+     - TrainDB 서버에 연결하는 최대 세션 개수
    * - traindb.server.querylog
      - true, **false**
-     - 수행 질의 로그의 기록 여부를 지정한다.
+     - 수행 질의 로그의 기록 여부
    * - traindb.server.tasktrace
      - true, **false**
-     - 수행한 질의 태스크 정보의 기록 여부를 지정한다.
+     - 수행한 질의 태스크 정보의 기록 여부
    * - traindb.server.modelrunner
      - **file**, py4j
-     - 로컬 모델타입을 실행할 때 어떤 실행기를 사용할 것인지를 지정한다.
+     - 로컬 모델타입의 실행 방식
+   * - traindb.server.default.charset
+     - **UTF-8**
+     - 기본 문자 집합
+   * - traindb.server.default.nationalcharset
+     - **UTF-8**
+     - 기본 다국어 문자 집합
 
 
 카탈로그 스토어 관련 파라미터
