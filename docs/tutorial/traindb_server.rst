@@ -22,9 +22,15 @@ TrainDB 서버에 접속할 때는 다음과 같이 JDBC 접속 문자열을 변
 
 * 원시 DBMS를 연결하는 경우: 다음과 같이 접속 문자열 뒤에 ``server.host`` 와 ``server.port`` 파라미터로 TrainDB 서버 정보를 지정한다.
 
-  jdbc:traindb:<dbms>://<dbms 주소>?server.host=<TrainDB 서버 주소>:<TrainDB 서버 포트>
+.. code-block:: console
 
-* TrainDB 단독으로 연결하는 경우: jdbc:traindb://<TrainDB 서버 주소>:<TrainDB 서버 포트> 형태로 지정한다.
+  jdbc:traindb:<dbms>://<dbms 주소>?server.host=<TrainDB 서버 주소>&server.port=<TrainDB 서버 포트>
+
+* TrainDB 단독으로 연결하는 경우: DBMS 정보 없이 다음의 형태로 지정한다.
+
+.. code-block:: console
+
+  jdbc:traindb://<TrainDB 서버 주소>:<TrainDB 서버 포트>
 
 TrainDB 서버 연결 예 (Python)
 -----------------------------
